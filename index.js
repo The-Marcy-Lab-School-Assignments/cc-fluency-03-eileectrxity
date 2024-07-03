@@ -66,3 +66,22 @@ const sumAllFollowers = (usersArr) => {
 
 // //logging q3 test to console
 // console.log(sumAllFollowers(users)); //1201913
+
+//QUESTION 4: a function that takes in a str along with the arr of objs and returns the user obj whose username matches the str parameter
+const searchUsername = (usersArr, str) => {
+  return usersArr.filter((userObj) => { //the find() method is not appropriate here as it would have returned just the obj when we want an arr of the obj
+    return userObj.username === str; //returning the userObj whose username matches the given str
+  });
+};
+
+// //logging q4 test to console
+// console.log(searchUsername(users, "@passaic_papi")); //logs:
+/*[
+  { name: 'Laisha C',
+    username: '@passaic_papi',
+    followers: 700,
+    verified: true,
+    bio: "My commute is longer than yours."
+  }
+];
+*/
