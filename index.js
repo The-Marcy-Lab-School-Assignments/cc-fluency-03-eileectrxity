@@ -41,3 +41,17 @@ const logAllNames = (usersArr) => {
 
 // //logging q1 test to console
 // logAllNames(users); //"Reuben"  "Laisha"  "Anne"  "Steph"  "Carmen"
+
+//QUESTION 2: a function that logs strings that contain the name and username property for each user to the console
+const getAllTags = (usersArr) => {
+  usersArr.forEach((userObj) => console.log(`Hi my name is ${userObj.name}, and my tag is ${userObj.username}!`)); //logging a str for each user obj
+};
+
+// //logging q2 test to console
+// getAllTags(users); //logs:
+/* 'Hi my name is Reuben, and my tag is @blood_pressure_killa!',
+'Hi my name is Laisha, and my tag is @passaic_papi!',
+'Hi my name is Anne, and my tag is @i_love_bambas!',
+'Hi my name is Steph, and my tag is @queen_of_the_kew!',
+'Hi my name is Carmen, and my tag is @omar_apollo_fanclub!'
+*/
