@@ -55,3 +55,14 @@ const getAllTags = (usersArr) => {
 'Hi my name is Steph, and my tag is @queen_of_the_kew!',
 'Hi my name is Carmen, and my tag is @omar_apollo_fanclub!'
 */
+
+//QUESTION 3: a function that returns a sum of the number of followers each user has
+const sumAllFollowers = (usersArr) => {
+  return usersArr.reduce((sum, userObj) => {
+    sum += userObj.followers; //increasing the sum by the int value of follower count found in the current userObjs followers property
+    return sum; //returning the new sum to the next iteration
+  }, 0); //starting accum sum count at 0
+};
+
+// //logging q3 test to console
+// console.log(sumAllFollowers(users)); //1201913
