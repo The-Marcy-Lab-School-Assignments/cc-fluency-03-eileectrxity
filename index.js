@@ -106,3 +106,44 @@ const longWinded = (usersArr) => {
   }
 ];
 */
+
+//QUESTION 6: a function that returns an array sorted by follower count from least to greatest
+const follower = (usersArr) => {
+  return [...usersArr].sort((a, b) => a.followers - b.followers); //spread given arr to so as to not mutate the original arr and return a new copy arr- no nested properties so no need to worry about it being a shallow copy
+};
+
+// //logging q6 test to console
+console.log(follower(users)); //logs:
+/*[
+  { name: 'Reuben O.',
+    username: '@blood_pressure_killa',
+    followers: 1,
+    verified: false,
+    bio: "It's an honor and a privilege."
+  },
+  { name: 'Anne H.',
+    username: '@i_love_bambas',
+    followers: 12,
+    verified: false,
+    bio: "@mayabee is my best friend"
+  },
+  { name: 'Laisha C',
+    username: '@passaic_papi',
+    followers: 700,
+    verified: true,
+    bio: "My commute is longer than yours."
+  },
+  { name: 'Steph S.',
+    username: '@queen_of_the_kew',
+    followers: 1200,
+    verified: false,
+    bio: "✌🏼"
+  },
+  { name: 'Carmen S',
+    username: '@omar_apollo_fanclub',
+    followers: 1200000,
+    verified: true,
+    bio: "My favorite restaurants are outback steakhouse and buffalo wildwings. My favorite stores are Zara, H&M, and Forever 21."
+  }
+]
+*/
