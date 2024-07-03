@@ -85,3 +85,24 @@ const searchUsername = (usersArr, str) => {
   }
 ];
 */
+
+//QUESTION 5: a function that returns the most long-winded user aka the obj with the longest bio
+const longWinded = (usersArr) => {
+  return usersArr.reduce((longestBio, userObj) => { //using reduce with a ternary statement as we're returning just one value, the obj with the longest bio
+    if (userObj.bio.length > longestBio.bio.length) { //could be refactored as a ternary --> comparing the bio length of the curr user obj in the iteration with the accum longestBio, the user obj with the longest bio at the moment
+      return userObj; //returning the userObj if so, to the next iteration with the accum, longestBio reassigned as it
+    } else return longestBio; //returning the userObj if that users bio length was greater than the curr user
+  }, usersArr[0]); //initializing accum to the first user obj in the given arr so that we have a valid obj with a bio property to compare to in the first iteration 
+};
+
+// //logging q5 test to console
+// console.log(longWinded(users)); //logs:
+/*[
+  { name: 'Carmen S',
+    username: '@omar_apollo_fanclub',
+    followers: 1200000,
+    verified: true,
+    bio: "My favorite restaurants are outback steakhouse and buffalo wildwings. My favorite stores are Zara, H&M, and Forever 21."
+  }
+];
+*/
